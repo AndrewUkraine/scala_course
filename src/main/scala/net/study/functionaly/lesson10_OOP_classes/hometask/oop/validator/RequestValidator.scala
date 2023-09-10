@@ -9,11 +9,10 @@ import net.study.functional.lesson10_OOP_classes.hometask.oop.request.SignUpRequ
 // here you can implement sub-traits for validation purpose
 
 
-trait RequestValidator[R] extends Mappers {
+trait RequestValidator[R]  {
 
   def validate(request: R): Either[Error, R]
 
-   override implicit val signUpRequestMapper: SignUpRequest => SignUpDto = _
 }
 
 object RequestValidator {
@@ -25,6 +24,8 @@ object RequestValidator {
    val Msisdn  = "msisdn"
 
 }
+
+
 
 
 

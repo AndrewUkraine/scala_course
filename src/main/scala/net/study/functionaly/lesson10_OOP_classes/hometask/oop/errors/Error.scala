@@ -16,6 +16,10 @@ case object MapperError extends Error {
   override val errorMessage: String = "mapperError"
 }
 
+case object InnerError extends Error {
+  override val errorMessage: String = "innerError"
+}
+
 // validation Errors
 case object EmptyStringError extends Error {
   override val errorMessage: String = "emptyError"
